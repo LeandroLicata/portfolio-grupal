@@ -1,174 +1,302 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Detalle del proyecto - Portfolio grupal">
-  <title>Padel Horizonte | Portfolio Grupal</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Detalle del proyecto - Portfolio grupal"
+    />
+    <title>Padel Horizonte | Portfolio Grupal</title>
 
-  <!-- Bootstrap 5 (CSS) por CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Estilos propios (subimos un nivel porque estamos dentro de /proyectos) -->
-  <link href="../css/styles.css" rel="stylesheet">
+    <!-- Bootstrap 5 (CSS) por CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Tema propio: paleta y tipografías -->
+    <link href="../css/colores.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
 
-  <!-- Estilos específicos de la demo de la landing (slides del carrusel) -->
-  <style>
-    .slide {
-      height: 320px; display:flex; align-items:center; justify-content:center;
-      color:#fff; text-align:center; font-size:1.5rem; font-weight:600;
-    }
-    .slide-1 { background: linear-gradient(135deg,#ff6b4a,#ffb05c); }
-    .slide-2 { background: linear-gradient(135deg,#16213e,#3a5a8a); }
-    .slide-3 { background: linear-gradient(135deg,#1f7a5a,#9fd6a0); }
-  </style>
-</head>
-<body>
-
-  <!-- ===== NAVBAR (con menú hamburguesa) ===== -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="../index.html">
-        <i class="bi bi-code-slash"></i> Nuestro Equipo
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-              aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="../index.html#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#equipo">Equipo</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#proyectos">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#contacto">Contacto</a></li>
-        </ul>
+    <!-- Estilos específicos de la demo de la landing (slides del carrusel) -->
+    <style>
+      .slide {
+        height: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      .slide-1 {
+        background: linear-gradient(135deg, #ff6b4a, #ffb05c);
+      }
+      .slide-2 {
+        background: linear-gradient(135deg, #16213e, #3a5a8a);
+      }
+      .slide-3 {
+        background: linear-gradient(135deg, #1f7a5a, #9fd6a0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== NAVBAR (con menú hamburguesa) ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+          <i class="bi bi-code-slash"></i> Nuestro Equipo
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#equipo">Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#proyectos">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-
-  <!-- ===== CONTENIDO DEL PROYECTO ===== -->
-  <main class="container py-5">
-
-    <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" class="mt-3">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
-        <li class="breadcrumb-item"><a href="../index.html#proyectos">Proyectos</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Padel Horizonte</li>
-      </ol>
     </nav>
 
-    <h1 class="mb-3">Padel Horizonte</h1>
+    <!-- ===== CONTENIDO DEL PROYECTO ===== -->
+    <main class="container py-5">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="mt-3">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#proyectos">Proyectos</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Padel Horizonte
+          </li>
+        </ol>
+      </nav>
 
-    <div class="mb-4">
-      <span class="badge text-bg-primary">HTML5</span>
-      <span class="badge text-bg-secondary">Bootstrap 5</span>
-    </div>
+      <h1 class="mb-3">Padel Horizonte</h1>
 
-    <div class="row">
-      <div class="col-lg-8">
-        <h2 class="h4">Descripción</h2>
-        <p>
-          Landing page para un complejo de pádel en Rodeo de la Cruz, Mendoza. Permite ver
-          las canchas, recorrer el complejo y reservar un turno desde el celular, sin
-          depender de una llamada telefónica. El complejo no tenía presencia web y los
-          turnos se coordinaban solo por teléfono.
-        </p>
-
-        <h2 class="h4 mt-4">Características principales</h2>
-        <ul>
-          <li>Diseño responsivo con menú hamburguesa que se colapsa en el celular.</li>
-          <li>Carrusel navegable con imágenes del complejo (indicadores y flechas).</li>
-          <li>Cuadro modal de reserva que abre y cierra, con enlace a WhatsApp.</li>
-          <li>Llamado a la acción claro en el menú, el inicio y la sección de ubicación.</li>
-        </ul>
-
-        <!-- ===== DEMO: CARRUSEL ===== -->
-        <h2 class="h4 mt-4 mb-3">El complejo</h2>
-        <div id="carruselCanchas" class="carousel slide rounded overflow-hidden shadow-sm mb-4" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carruselCanchas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carruselCanchas" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carruselCanchas" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active"><div class="slide slide-1">Atardecer sobre las canchas</div></div>
-            <div class="carousel-item"><div class="slide slide-2">Iluminación LED nocturna</div></div>
-            <div class="carousel-item"><div class="slide slide-3">Quincho y parrilla para after</div></div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carruselCanchas" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carruselCanchas" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
-        </div>
-
-        <!-- ===== DEMO: BOTÓN QUE ABRE EL MODAL ===== -->
-        <div class="d-grid d-sm-block">
-          <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalReserva">
-            <i class="bi bi-calendar-check"></i> Reservar turno
-          </button>
-        </div>
+      <div class="mb-4">
+        <span class="badge text-bg-primary">HTML5</span>
+        <span class="badge text-bg-secondary">Bootstrap 5</span>
       </div>
 
-      <div class="col-lg-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h3 class="h6 text-muted">Datos del proyecto</h3>
-            <p class="mb-1"><strong>Tecnologías:</strong> HTML5, Bootstrap 5</p>
-            <p class="mb-3"><strong>Estado:</strong> Funcional</p>
-            <a href="https://github.com/federicocabrera1978-svg/landing-padel" class="btn btn-outline-dark w-100" target="_blank" rel="noopener">
-              <i class="bi bi-github"></i> Código fuente
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <h2 class="h4">Descripción</h2>
+          <p>
+            Landing page para un complejo de pádel en Rodeo de la Cruz, Mendoza.
+            Permite ver las canchas, recorrer el complejo y reservar un turno
+            desde el celular, sin depender de una llamada telefónica. El
+            complejo no tenía presencia web y los turnos se coordinaban solo por
+            teléfono.
+          </p>
 
-    <a href="../index.html#proyectos" class="btn btn-link mt-4 px-0">
-      <i class="bi bi-arrow-left"></i> Volver a proyectos
-    </a>
-
-  </main>
-
-  <!-- ===== MODAL de reserva (se abre y se cierra) ===== -->
-  <div class="modal fade" id="modalReserva" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="tituloModal">Reservá tu turno</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <p>Elegí cancha y horario y coordinamos por WhatsApp:</p>
-          <ul class="mb-3">
-            <li>Turnos de 90 minutos</li>
-            <li>Pelotas y paletas en alquiler</li>
-            <li>Iluminación nocturna sin costo extra</li>
+          <h2 class="h4 mt-4">Características principales</h2>
+          <ul>
+            <li>
+              Diseño responsivo con menú hamburguesa que se colapsa en el
+              celular.
+            </li>
+            <li>
+              Carrusel navegable con imágenes del complejo (indicadores y
+              flechas).
+            </li>
+            <li>
+              Cuadro modal de reserva que abre y cierra, con enlace a WhatsApp.
+            </li>
+            <li>
+              Llamado a la acción claro en el menú, el inicio y la sección de
+              ubicación.
+            </li>
           </ul>
-          <div class="d-grid">
-            <a class="btn btn-success" href="https://wa.me/5492610000000" target="_blank" rel="noopener">
-              <i class="bi bi-whatsapp"></i> Escribir por WhatsApp
-            </a>
+
+          <!-- ===== DEMO: CARRUSEL ===== -->
+          <h2 class="h4 mt-4 mb-3">El complejo</h2>
+          <div
+            id="carruselCanchas"
+            class="carousel slide rounded overflow-hidden shadow-sm mb-4"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carruselCanchas"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carruselCanchas"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carruselCanchas"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="slide slide-1">Atardecer sobre las canchas</div>
+              </div>
+              <div class="carousel-item">
+                <div class="slide slide-2">Iluminación LED nocturna</div>
+              </div>
+              <div class="carousel-item">
+                <div class="slide slide-3">Quincho y parrilla para after</div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carruselCanchas"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carruselCanchas"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+
+          <!-- ===== DEMO: BOTÓN QUE ABRE EL MODAL ===== -->
+          <div class="d-grid d-sm-block">
+            <button
+              class="btn btn-primary btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#modalReserva"
+            >
+              <i class="bi bi-calendar-check"></i> Reservar turno
+            </button>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+        <div class="col-lg-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 text-muted">Datos del proyecto</h3>
+              <p class="mb-1">
+                <strong>Tecnologías:</strong> HTML5, Bootstrap 5
+              </p>
+              <p class="mb-3"><strong>Estado:</strong> Funcional</p>
+              <a
+                href="https://github.com/federicocabrera1978-svg/landing-padel"
+                class="btn btn-outline-dark w-100"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="bi bi-github"></i> Código fuente
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="../index.html#proyectos" class="btn btn-link mt-4 px-0">
+        <i class="bi bi-arrow-left"></i> Volver a proyectos
+      </a>
+    </main>
+
+    <!-- ===== MODAL de reserva (se abre y se cierra) ===== -->
+    <div
+      class="modal fade"
+      id="modalReserva"
+      tabindex="-1"
+      aria-labelledby="tituloModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloModal">Reservá tu turno</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Elegí cancha y horario y coordinamos por WhatsApp:</p>
+            <ul class="mb-3">
+              <li>Turnos de 90 minutos</li>
+              <li>Pelotas y paletas en alquiler</li>
+              <li>Iluminación nocturna sin costo extra</li>
+            </ul>
+            <div class="d-grid">
+              <a
+                class="btn btn-success"
+                href="https://wa.me/5492610000000"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="bi bi-whatsapp"></i> Escribir por WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <p class="small mb-0">&copy; 2026 Nuestro Equipo · Práctica Profesionalizante I</p>
-    </div>
-  </footer>
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p class="small mb-0">
+          &copy; 2026 Nuestro Equipo · Práctica Profesionalizante I
+        </p>
+      </div>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

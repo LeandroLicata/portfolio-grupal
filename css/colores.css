@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400&family=Poppins:wght@700&display=swap");
+
+:root {
+  --text: #020062;
+  --background: #e6e6f9;
+  --primary: #2563eb;
+  --secondary: #020062;
+  --accent: #f59e0b; /* o #06B6D4 */
+  /* --- Traducción de tu paleta al "idioma" de Bootstrap --- */
+  --bs-primary: var(--primary);
+  --bs-primary-rgb: 37, 99, 235; /* #2563EB en RGB */
+  --bs-secondary: var(--secondary);
+  --bs-secondary-rgb: 2, 0, 98; /* #020062 en RGB */
+
+  --bs-body-color: var(--text); /* color del texto */
+  --bs-link-color: var(--primary); /* color de los links */
+  --bs-link-color-rgb: 37, 99, 235;
+  --bs-dark-rgb: 2, 0, 98; /* tu navy (#020062) para navbar/footer */
+}
+
+body {
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4.21rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 4vw, 3.158rem);
+}
+h3 {
+  font-size: 2.369rem;
+}
+h4 {
+  font-size: 1.777rem;
+}
+h5 {
+  font-size: 1.333rem;
+}
+small {
+  font-size: 0.75rem;
+}
+
+/* Los botones primary usan su propia variable interna, la pisamos acá */
+.btn-primary {
+  --bs-btn-bg: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: #1e4fc4;
+  --bs-btn-hover-border-color: #1e4fc4;
+  --bs-btn-active-bg: #1e4fc4;
+}
+
+/* Botones "outline" primary (ej.: "Ver detalle") */
+.btn-outline-primary {
+  --bs-btn-color: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: var(--primary);
+  --bs-btn-hover-border-color: var(--primary);
+  --bs-btn-active-bg: var(--primary);
+  --bs-btn-active-border-color: var(--primary);
+}
+
+/* Botón con el color de acento (para llamados a la acción) */
+.btn-accent {
+  --bs-btn-color: #1a1a1a; /* texto oscuro: se lee mejor sobre ámbar */
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-hover-color: #1a1a1a;
+  --bs-btn-hover-bg: #d97706; /* ámbar un poco más oscuro al pasar el mouse */
+  --bs-btn-hover-border-color: #d97706;
+  --bs-btn-active-bg: #d97706;
+}
