@@ -32,18 +32,18 @@ body {
   object-fit: cover;
 }
 
-/* Pequeña animación al pasar el mouse por las cards */
 .card {
-  border-top: 3px solid transparent; /* reserva 3px arriba, invisibles por ahora */
+  --bs-card-bg: #fff;
+  border-top: 3px solid transparent;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
-    border-color 0.2s ease; /* para que el color del borde aparezca suave */
+    border-color 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  border-top-color: var(--accent); /* el ámbar aparece solo en hover */
+  border-top-color: var(--accent);
 }
 
 /* Título de sección con subrayado de acento */
@@ -61,5 +61,5 @@ body {
   width: 60px;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--accent); /* tu ámbar */
+  background-color: var(--accent);
 }

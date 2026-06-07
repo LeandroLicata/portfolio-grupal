@@ -16,6 +16,7 @@
   --bs-link-color: var(--primary); /* color de los links */
   --bs-link-color-rgb: 37, 99, 235;
   --bs-dark-rgb: 2, 0, 98; /* tu navy (#020062) para navbar/footer */
+  --bs-body-bg: var(--background); /* fondo lavanda en toda la página */
 }
 
 body {
@@ -83,4 +84,9 @@ small {
   --bs-btn-hover-bg: #d97706; /* ámbar un poco más oscuro al pasar el mouse */
   --bs-btn-hover-border-color: #d97706;
   --bs-btn-active-bg: #d97706;
+}
+
+/* Links del navbar: hover en color de acento */
+.navbar {
+  --bs-navbar-hover-color: var(--accent);
 }
