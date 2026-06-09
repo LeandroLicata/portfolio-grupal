@@ -1,188 +1,299 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Detalle del proyecto - Portfolio grupal">
-  <title>Formulario Mary Kay | Portfolio Grupal</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Detalle del proyecto - Portfolio grupal"
+    />
+    <title>Formulario Mary Kay | Portfolio Grupal</title>
 
-  <!-- Bootstrap 5 (CSS) por CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Estilos propios (subimos un nivel porque estamos dentro de /proyectos) -->
-  <link href="../css/styles.css" rel="stylesheet">
-</head>
-<body>
-
-  <!-- ===== NAVBAR ===== -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="../index.html">
-        <i class="bi bi-code-slash"></i> Nuestro Equipo
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-              aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="../index.html#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#equipo">Equipo</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#proyectos">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="../index.html#contacto">Contacto</a></li>
-        </ul>
+    <!-- Bootstrap 5 (CSS) por CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Tema propio: paleta y tipografías -->
+    <link href="../css/colores.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+          <i class="bi bi-code-slash"></i> Nuestro Equipo
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#equipo">Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#proyectos">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-
-  <!-- ===== CONTENIDO DEL PROYECTO ===== -->
-  <main class="container py-5">
-
-    <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" class="mt-3">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
-        <li class="breadcrumb-item"><a href="../index.html#proyectos">Proyectos</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Formulario de Pedidos Mary Kay</li>
-      </ol>
     </nav>
 
-    <h1 class="mb-3">Formulario de Pedidos Mary Kay</h1>
+    <!-- ===== CONTENIDO DEL PROYECTO ===== -->
+    <main class="container py-5">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="mt-3">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#proyectos">Proyectos</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Formulario de Pedidos Mary Kay
+          </li>
+        </ol>
+      </nav>
 
-    <div class="mb-4">
-      <span class="badge text-bg-primary">HTML5</span>
-      <span class="badge text-bg-secondary">Bootstrap 5</span>
-      <span class="badge text-bg-warning">JavaScript</span>
-    </div>
+      <h1 class="mb-3">Formulario de Pedidos Mary Kay</h1>
 
-    <div class="row">
-      <div class="col-lg-8">
-        <h2 class="h4">Descripción</h2>
-        <p>
-          Formulario de pedidos para una consultora independiente de Mary Kay. Permite a
-          las clientas elegir un producto, indicar la cantidad y enviar el pedido
-          directamente por WhatsApp a la consultora, con los datos ya ordenados. Resuelve
-          un problema real: antes los pedidos llegaban sueltos por mensaje, sin un formato
-          fijo, lo que generaba confusiones de producto y cantidad.
-        </p>
+      <div class="mb-4">
+        <span class="badge text-bg-primary">HTML5</span>
+        <span class="badge text-bg-secondary">Bootstrap 5</span>
+        <span class="badge text-bg-warning">JavaScript</span>
+      </div>
 
-        <h2 class="h4 mt-4">Características principales</h2>
-        <ul>
-          <li>Validación de campos con HTML5 y Bootstrap (nombre, email, teléfono, cantidad y consentimiento).</li>
-          <li>Mensajes de error claros cuando un campo no es válido.</li>
-          <li>Envío del pedido por WhatsApp con el detalle ya armado.</li>
-          <li>Diseño responsivo: se adapta al celular, que es donde más se usa.</li>
-        </ul>
+      <div class="row">
+        <div class="col-lg-8">
+          <h2 class="h4">Descripción</h2>
+          <p>
+            Formulario de pedidos para una consultora independiente de Mary Kay.
+            Permite a las clientas elegir un producto, indicar la cantidad y
+            enviar el pedido directamente por WhatsApp a la consultora, con los
+            datos ya ordenados. Resuelve un problema real: antes los pedidos
+            llegaban sueltos por mensaje, sin un formato fijo, lo que generaba
+            confusiones de producto y cantidad.
+          </p>
 
-        <!-- ===== DEMO DEL FORMULARIO (funcional, en Bootstrap) ===== -->
-        <h2 class="h4 mt-4 mb-3">Probá el formulario</h2>
-        <div class="card shadow-sm mb-4">
-          <div class="card-body p-4">
+          <h2 class="h4 mt-4">Características principales</h2>
+          <ul>
+            <li>
+              Validación de campos con HTML5 y Bootstrap (nombre, email,
+              teléfono, cantidad y consentimiento).
+            </li>
+            <li>Mensajes de error claros cuando un campo no es válido.</li>
+            <li>Envío del pedido por WhatsApp con el detalle ya armado.</li>
+            <li>
+              Diseño responsivo: se adapta al celular, que es donde más se usa.
+            </li>
+          </ul>
 
-            <form id="formPedido" class="needs-validation" novalidate>
-              <!-- NOMBRE -->
-              <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre y apellido</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ej.: María Gómez" required minlength="3">
-                <div class="invalid-feedback">Por favor ingresá tu nombre (mínimo 3 letras).</div>
-              </div>
-
-              <!-- EMAIL -->
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com" required>
-                <div class="invalid-feedback">Ingresá un correo válido (con @ y dominio).</div>
-              </div>
-
-              <!-- WHATSAPP -->
-              <div class="mb-3">
-                <label for="telefono" class="form-label">WhatsApp</label>
-                <div class="input-group">
-                  <span class="input-group-text">+54</span>
-                  <input type="tel" class="form-control" id="telefono" placeholder="2615123456" required pattern="[0-9]{8,13}">
-                  <div class="invalid-feedback">Ingresá solo números (entre 8 y 13 dígitos).</div>
+          <!-- ===== DEMO DEL FORMULARIO (funcional, en Bootstrap) ===== -->
+          <h2 class="h4 mt-4 mb-3">Probá el formulario</h2>
+          <div class="card shadow-sm mb-4">
+            <div class="card-body p-4">
+              <form id="formPedido" class="needs-validation" novalidate>
+                <!-- NOMBRE -->
+                <div class="mb-3">
+                  <label for="nombre" class="form-label"
+                    >Nombre y apellido</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    placeholder="Ej.: María Gómez"
+                    required
+                    minlength="3"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor ingresá tu nombre (mínimo 3 letras).
+                  </div>
                 </div>
-              </div>
 
-              <!-- PRODUCTO -->
-              <div class="mb-3">
-                <label for="producto" class="form-label">Producto de interés</label>
-                <select class="form-select" id="producto" required>
-                  <option value="" selected disabled>Elegí un producto…</option>
-                  <option>Base TimeWise 3D</option>
-                  <option>Set de cuidado facial TimeWise</option>
-                  <option>Labial gel semi-mate</option>
-                  <option>Máscara de pestañas Lash Love</option>
-                  <option>Perfume Thinking of You</option>
-                  <option>Crema de manos Satin Hands</option>
-                </select>
-                <div class="invalid-feedback">Elegí al menos un producto.</div>
-              </div>
+                <!-- EMAIL -->
+                <div class="mb-3">
+                  <label for="email" class="form-label"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="tucorreo@ejemplo.com"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Ingresá un correo válido (con @ y dominio).
+                  </div>
+                </div>
 
-              <!-- CANTIDAD -->
-              <div class="mb-3">
-                <label for="cantidad" class="form-label">Cantidad</label>
-                <input type="number" class="form-control" id="cantidad" value="1" min="1" max="20" required>
-                <div class="invalid-feedback">La cantidad debe ser entre 1 y 20.</div>
-              </div>
+                <!-- WHATSAPP -->
+                <div class="mb-3">
+                  <label for="telefono" class="form-label">WhatsApp</label>
+                  <div class="input-group">
+                    <span class="input-group-text">+54</span>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="telefono"
+                      placeholder="2615123456"
+                      required
+                      pattern="[0-9]{8,13}"
+                    />
+                    <div class="invalid-feedback">
+                      Ingresá solo números (entre 8 y 13 dígitos).
+                    </div>
+                  </div>
+                </div>
 
-              <!-- MENSAJE -->
-              <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje (opcional)</label>
-                <textarea class="form-control" id="mensaje" rows="3" placeholder="Ej.: prefiero el tono natural"></textarea>
-              </div>
+                <!-- PRODUCTO -->
+                <div class="mb-3">
+                  <label for="producto" class="form-label"
+                    >Producto de interés</label
+                  >
+                  <select class="form-select" id="producto" required>
+                    <option value="" selected disabled>
+                      Elegí un producto…
+                    </option>
+                    <option>Base TimeWise 3D</option>
+                    <option>Set de cuidado facial TimeWise</option>
+                    <option>Labial gel semi-mate</option>
+                    <option>Máscara de pestañas Lash Love</option>
+                    <option>Perfume Thinking of You</option>
+                    <option>Crema de manos Satin Hands</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Elegí al menos un producto.
+                  </div>
+                </div>
 
-              <!-- CONSENTIMIENTO -->
-              <div class="form-check mb-4">
-                <input class="form-check-input" type="checkbox" id="acepto" required>
-                <label class="form-check-label" for="acepto">
-                  Acepto que la consultora me contacte por WhatsApp para coordinar el pedido.
-                </label>
-                <div class="invalid-feedback">Necesitamos tu consentimiento para contactarte.</div>
-              </div>
+                <!-- CANTIDAD -->
+                <div class="mb-3">
+                  <label for="cantidad" class="form-label">Cantidad</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="cantidad"
+                    value="1"
+                    min="1"
+                    max="20"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    La cantidad debe ser entre 1 y 20.
+                  </div>
+                </div>
 
-              <div class="d-grid">
-                <button type="submit" class="btn btn-primary btn-lg">Enviar pedido por WhatsApp</button>
-              </div>
-            </form>
+                <!-- MENSAJE -->
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label"
+                    >Mensaje (opcional)</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="mensaje"
+                    rows="3"
+                    placeholder="Ej.: prefiero el tono natural"
+                  ></textarea>
+                </div>
 
-            <div id="avisoOk" class="alert alert-success mt-3 d-none" role="alert">
-              ¡Listo! Se abrió WhatsApp con tu pedido cargado.
+                <!-- CONSENTIMIENTO -->
+                <div class="form-check mb-4">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="acepto"
+                    required
+                  />
+                  <label class="form-check-label" for="acepto">
+                    Acepto que la consultora me contacte por WhatsApp para
+                    coordinar el pedido.
+                  </label>
+                  <div class="invalid-feedback">
+                    Necesitamos tu consentimiento para contactarte.
+                  </div>
+                </div>
+
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    Enviar pedido por WhatsApp
+                  </button>
+                </div>
+              </form>
+
+              <div
+                id="avisoOk"
+                class="alert alert-success mt-3 d-none"
+                role="alert"
+              >
+                ¡Listo! Se abrió WhatsApp con tu pedido cargado.
+              </div>
             </div>
-
           </div>
         </div>
 
-      </div>
-
-      <div class="col-lg-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h3 class="h6 text-muted">Datos del proyecto</h3>
-            <p class="mb-1"><strong>Tecnologías:</strong> HTML5, Bootstrap 5, JavaScript</p>
-            <p class="mb-3"><strong>Estado:</strong> Funcional</p>
-            <a href="https://github.com/federicocabrera1978-svg/formulario-marykay" class="btn btn-outline-dark w-100" target="_blank" rel="noopener">
-              <i class="bi bi-github"></i> Código fuente
-            </a>
+        <div class="col-lg-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 text-muted">Datos del proyecto</h3>
+              <p class="mb-1">
+                <strong>Tecnologías:</strong> HTML5, Bootstrap 5, JavaScript
+              </p>
+              <p class="mb-3"><strong>Estado:</strong> Funcional</p>
+              <a
+                href="https://github.com/federicocabrera1978-svg/formulario-marykay"
+                class="btn btn-outline-dark w-100"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="bi bi-github"></i> Código fuente
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <a href="../index.html#proyectos" class="btn btn-link mt-4 px-0">
-      <i class="bi bi-arrow-left"></i> Volver a proyectos
-    </a>
+      <a href="../index.html#proyectos" class="btn btn-link mt-4 px-0">
+        <i class="bi bi-arrow-left"></i> Volver a proyectos
+      </a>
+    </main>
 
-  </main>
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p class="small mb-0">
+          &copy; 2026 Nuestro Equipo · Práctica Profesionalizante I
+        </p>
+      </div>
+    </footer>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <p class="small mb-0">&copy; 2026 Nuestro Equipo · Práctica Profesionalizante I</p>
-    </div>
-  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Validación y envío del formulario -->
+    <script>
+      const WHATSAPP_NELIDA = "5492615000000"; // <-- reemplazar por el número real
+      const formulario = document.getElementById("formPedido");
+      const avisoOk = document.getElementById("avisoOk");
 
   <!-- Validación y envío del formulario -->
   <script>
@@ -190,25 +301,17 @@
     const formulario = document.getElementById('formPedido');
     const avisoOk = document.getElementById('avisoOk');
 
-    formulario.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!formulario.checkValidity()) {
-        formulario.classList.add('was-validated');
-        return;
-      }
-      formulario.classList.add('was-validated');
+        const nombre = document.getElementById("nombre").value.trim();
+        const producto = document.getElementById("producto").value;
+        const cantidad = document.getElementById("cantidad").value;
+        const mensaje = document.getElementById("mensaje").value.trim();
 
-      const nombre = document.getElementById('nombre').value.trim();
-      const producto = document.getElementById('producto').value;
-      const cantidad = document.getElementById('cantidad').value;
-      const mensaje = document.getElementById('mensaje').value.trim();
+        let texto = `Hola! Soy ${nombre}.%0AQuiero pedir: ${cantidad} x ${producto}.`;
+        if (mensaje) texto += `%0ANota: ${mensaje}`;
 
-      let texto = `Hola! Soy ${nombre}.%0AQuiero pedir: ${cantidad} x ${producto}.`;
-      if (mensaje) texto += `%0ANota: ${mensaje}`;
-
-      avisoOk.classList.remove('d-none');
-      window.open(`https://wa.me/${WHATSAPP_NELIDA}?text=${texto}`, '_blank');
-    });
-  </script>
-</body>
+        avisoOk.classList.remove("d-none");
+        window.open(`https://wa.me/${WHATSAPP_NELIDA}?text=${texto}`, "_blank");
+      });
+    </script>
+  </body>
 </html>

@@ -13,7 +13,7 @@ body {
 /* ===== Hero ===== */
 .hero {
   min-height: 70vh;
-  background: linear-gradient(135deg, #1e3a8a 0%, #4f46e5 100%);
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
   padding: 4rem 0;
 }
 
@@ -32,11 +32,34 @@ body {
   object-fit: cover;
 }
 
-/* Pequeña animación al pasar el mouse por las cards */
 .card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  --bs-card-bg: #fff;
+  border-top: 3px solid transparent;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
+  border-top-color: var(--accent);
+}
+
+/* Título de sección con subrayado de acento */
+.section-title {
+  position: relative; /* el subrayado se posiciona respecto a este título */
+  padding-bottom: 0.75rem; /* espacio para que el subrayado no toque el texto */
+}
+
+.section-title::after {
+  content: ""; /* obligatorio para que el pseudo-elemento exista */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* lo centra horizontalmente */
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent);
 }
