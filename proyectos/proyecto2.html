@@ -290,28 +290,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Validación y envío del formulario -->
-    <script>
-      const WHATSAPP_NELIDA = "5492615000000"; // <-- reemplazar por el número real
-      const formulario = document.getElementById("formPedido");
-      const avisoOk = document.getElementById("avisoOk");
-
-  <!-- Validación y envío del formulario -->
   <script>
-    const WHATSAPP_NELIDA = '5492615000000'; 
+    const WHATSAPP_NELIDA = '5492615000000';
     const formulario = document.getElementById('formPedido');
     const avisoOk = document.getElementById('avisoOk');
 
-        const nombre = document.getElementById("nombre").value.trim();
-        const producto = document.getElementById("producto").value;
-        const cantidad = document.getElementById("cantidad").value;
-        const mensaje = document.getElementById("mensaje").value.trim();
+    formulario.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!formulario.checkValidity()) {
+        formulario.classList.add('was-validated');
+        return;
+      }
+      formulario.classList.add('was-validated');
 
-        let texto = `Hola! Soy ${nombre}.%0AQuiero pedir: ${cantidad} x ${producto}.`;
-        if (mensaje) texto += `%0ANota: ${mensaje}`;
+      const nombre = document.getElementById('nombre').value.trim();
+      const producto = document.getElementById('producto').value;
+      const cantidad = document.getElementById('cantidad').value;
+      const mensaje = document.getElementById('mensaje').value.trim();
 
-        avisoOk.classList.remove("d-none");
-        window.open(`https://wa.me/${WHATSAPP_NELIDA}?text=${texto}`, "_blank");
-      });
-    </script>
-  </body>
+      let texto = `Hola! Soy ${nombre}.%0AQuiero pedir: ${cantidad} x ${producto}.`;
+      if (mensaje) texto += `%0ANota: ${mensaje}`;
+
+      avisoOk.classList.remove('d-none');
+      window.open(`https://wa.me/${WHATSAPP_NELIDA}?text=${texto}`, '_blank');
+    });
+  </script>
+</body>
 </html>
