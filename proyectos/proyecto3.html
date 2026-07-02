@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Detalle del proyecto - Portfolio grupal"
-    />
+    <meta name="description" content="Detalle del proyecto - Portfolio grupal" />
     <title>Padel Horizonte | Portfolio Grupal</title>
 
     <!-- Bootstrap 5 (CSS) por CDN -->
@@ -21,32 +18,9 @@
     <!-- Tema propio: paleta y tipografías -->
     <link href="../css/colores.css" rel="stylesheet" />
     <link href="../css/styles.css" rel="stylesheet" />
-
-    <!-- Estilos específicos de la demo de la landing (slides del carrusel) -->
-    <style>
-      .slide {
-        height: 320px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: 600;
-      }
-      .slide-1 {
-        background: linear-gradient(135deg, #ff6b4a, #ffb05c);
-      }
-      .slide-2 {
-        background: linear-gradient(135deg, #16213e, #3a5a8a);
-      }
-      .slide-3 {
-        background: linear-gradient(135deg, #1f7a5a, #9fd6a0);
-      }
-    </style>
   </head>
   <body>
-    <!-- ===== NAVBAR (con menú hamburguesa) ===== -->
+    <!-- ===== NAVBAR ===== -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand fw-bold" href="../index.html">
@@ -104,22 +78,28 @@
         <span class="badge text-bg-secondary">Bootstrap 5</span>
       </div>
 
+      <!-- Captura más representativa de la GUI (pedida por el punto 5) -->
+      <img
+        src="../assets/img/horizonte.png"
+        class="img-fluid rounded shadow-sm mb-4"
+        alt="Captura de la landing page Padel Horizonte"
+      />
+
       <div class="row">
         <div class="col-lg-8">
           <h2 class="h4">Descripción</h2>
           <p>
             Landing page para un complejo de pádel en Rodeo de la Cruz, Mendoza.
             Permite ver las canchas, recorrer el complejo y reservar un turno
-            desde el celular, sin depender de una llamada telefónica. El
-            complejo no tenía presencia web y los turnos se coordinaban solo por
-            teléfono.
+            desde el celular, sin depender de una llamada telefónica. El complejo
+            no tenía presencia web y los turnos se coordinaban solo por teléfono.
           </p>
 
           <h2 class="h4 mt-4">Características principales</h2>
           <ul>
             <li>
-              Diseño responsivo con menú hamburguesa que se colapsa en el
-              celular.
+              Diseño responsivo (mobile-first) con menú hamburguesa que se
+              colapsa en el celular.
             </li>
             <li>
               Carrusel navegable con imágenes del complejo (indicadores y
@@ -129,91 +109,25 @@
               Cuadro modal de reserva que abre y cierra, con enlace a WhatsApp.
             </li>
             <li>
-              Llamado a la acción claro en el menú, el inicio y la sección de
-              ubicación.
+              Secciones de complejo, precios y ubicación con mapa embebido.
             </li>
           </ul>
 
-          <!-- ===== DEMO: CARRUSEL ===== -->
-          <h2 class="h4 mt-4 mb-3">El complejo</h2>
-          <div
-            id="carruselCanchas"
-            class="carousel slide rounded overflow-hidden shadow-sm mb-4"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carruselCanchas"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carruselCanchas"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carruselCanchas"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="slide slide-1">Atardecer sobre las canchas</div>
-              </div>
-              <div class="carousel-item">
-                <div class="slide slide-2">Iluminación LED nocturna</div>
-              </div>
-              <div class="carousel-item">
-                <div class="slide slide-3">Quincho y parrilla para after</div>
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carruselCanchas"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carruselCanchas"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
-          </div>
-
-          <!-- ===== DEMO: BOTÓN QUE ABRE EL MODAL ===== -->
-          <div class="d-grid d-sm-block">
-            <button
+          <div class="d-grid d-sm-flex gap-2 mt-4">
+            <a
+              href="landing-padel.html"
               class="btn btn-primary btn-lg"
-              data-bs-toggle="modal"
-              data-bs-target="#modalReserva"
+              target="_blank"
+              rel="noopener"
             >
-              <i class="bi bi-calendar-check"></i> Reservar turno
-            </button>
+              <i class="bi bi-box-arrow-up-right"></i> Ver la landing
+            </a>
           </div>
         </div>
 
+        <!-- Barra lateral: datos del proyecto + roles -->
         <div class="col-lg-4">
-          <div class="card shadow-sm">
+          <div class="card shadow-sm mb-4">
             <div class="card-body">
               <h3 class="h6 text-muted">Datos del proyecto</h3>
               <p class="mb-1">
@@ -230,6 +144,35 @@
               </a>
             </div>
           </div>
+
+          <!-- Roles del equipo en este proyecto (rúbrica: participación) -->
+          <!-- ⚠️ CONFIRMAR el rol real de cada integrante -->
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 text-muted">Roles del equipo</h3>
+              <ul class="list-unstyled mb-0 small">
+                <li class="mb-2">
+                  <i class="bi bi-person-fill text-primary"></i>
+                  <strong>Federico Cabrera</strong> — Programador
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-person-fill text-primary"></i>
+                  <strong>Leandro Licata</strong> — (rol a completar)
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-person-fill text-primary"></i>
+                  <strong>Gonzalo Tapia</strong> — (rol a completar)
+                </li>
+                <li class="mb-0">
+                  <i class="bi bi-person-fill text-primary"></i>
+                  <strong>Gustavo Di Paola</strong> — (rol a completar)
+                </li>
+              </ul>
+              <p class="text-muted small mt-2 mb-0">
+                Roles posibles: analista, documentador, diseñador, programador.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -237,56 +180,6 @@
         <i class="bi bi-arrow-left"></i> Volver a proyectos
       </a>
     </main>
-
-    <!-- ===== MODAL de reserva (se abre y se cierra) ===== -->
-    <div
-      class="modal fade"
-      id="modalReserva"
-      tabindex="-1"
-      aria-labelledby="tituloModal"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="tituloModal">Reservá tu turno</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Cerrar"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p>Elegí cancha y horario y coordinamos por WhatsApp:</p>
-            <ul class="mb-3">
-              <li>Turnos de 90 minutos</li>
-              <li>Pelotas y paletas en alquiler</li>
-              <li>Iluminación nocturna sin costo extra</li>
-            </ul>
-            <div class="d-grid">
-              <a
-                class="btn btn-success"
-                href="https://wa.me/5492610000000"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="bi bi-whatsapp"></i> Escribir por WhatsApp
-              </a>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- ===== FOOTER ===== -->
     <footer class="bg-dark text-white py-4">

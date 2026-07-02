@@ -27,7 +27,8 @@ portfolio-grupal/
 └── proyectos/
     ├── proyecto1.html      # Letras Académicas (proyecto adicional)
     ├── proyecto2.html      # Ejercicio 2: formulario con validación
-    ├── proyecto3.html      # Ejercicio 3: landing page
+    ├── proyecto3.html      # Ejercicio 3: detalle de la landing page
+    ├── landing-padel.html  # Ejercicio 3: landing page standalone (la demo real)
     └── proyecto4.html      # Ejercicio 4: guía de estilo
 ```
 
