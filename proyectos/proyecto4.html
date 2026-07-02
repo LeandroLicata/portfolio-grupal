@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guía de estilo - Portfolio grupal" />
+    <title>Guía de estilo | Portfolio Grupal</title>
+
+    <!-- Bootstrap 5 solo para la navbar/footer, para mantener el mismo
+         marco que las otras páginas del portfolio -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Tema propio: paleta y tipografías -->
+    <link href="../css/colores.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <!-- CSS propio de la guía de estilo (Ejercicio 4, archivo aparte) -->
+    <link href="../css/guia-estilo.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+          <i class="bi bi-code-slash"></i> Nuestro Equipo
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#cv">CV del equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#proyectos">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== CONTENIDO DEL PROYECTO ===== -->
+    <main class="container py-5">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="mt-3">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#proyectos">Proyectos</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Guía de estilo
+          </li>
+        </ol>
+      </nav>
+
+      <h1 class="mb-3">Guía de estilo del portfolio</h1>
+
+      <div class="mb-4">
+        <span class="badge text-bg-primary">HTML5</span>
+        <span class="badge text-bg-info">CSS3</span>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8">
+          <h2 class="h4">Descripción</h2>
+          <p>
+            Guía de estilo que documenta el sistema visual del propio portfolio:
+            su paleta de colores, su tipografía y los componentes base (botones,
+            enlaces, campos de formulario y acordeón). Es un ejercicio pensado
+            para lo visual, programado con HTML5 y CSS propio, sin frameworks.
+          </p>
+
+          <!-- ===== GUÍA DE ESTILO (todo el CSS está en css/guia-estilo.css) ===== -->
+          <div class="guia-estilo mt-4">
+            <p class="g-intro">
+              Sistema visual de la marca. Cada bloque muestra un elemento del
+              lenguaje de diseño listo para reutilizar.
+            </p>
+
+            <!-- 1. Paleta de colores -->
+            <section class="g-seccion">
+              <h2>1 · Paleta de colores</h2>
+              <div class="g-paleta">
+                <div class="g-color">
+                  <div class="muestra" style="background: #2563eb"></div>
+                  <div class="datos">
+                    <span class="nombre">Azul (primario)</span>
+                    <span class="hex">#2563eb</span>
+                  </div>
+                </div>
+                <div class="g-color">
+                  <div class="muestra" style="background: #020062"></div>
+                  <div class="datos">
+                    <span class="nombre">Navy (secundario)</span>
+                    <span class="hex">#020062</span>
+                  </div>
+                </div>
+                <div class="g-color">
+                  <div class="muestra" style="background: #f59e0b"></div>
+                  <div class="datos">
+                    <span class="nombre">Ámbar (acento)</span>
+                    <span class="hex">#f59e0b</span>
+                  </div>
+                </div>
+                <div class="g-color">
+                  <div class="muestra" style="background: #e6e6f9"></div>
+                  <div class="datos">
+                    <span class="nombre">Lavanda (fondo)</span>
+                    <span class="hex">#e6e6f9</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 2. Tipografía -->
+            <section class="g-seccion">
+              <h2>2 · Tipografía</h2>
+              <div class="g-tipo">
+                <div>
+                  <p class="etiqueta">Títulos — Poppins</p>
+                  <p class="g-tipo-display mb-0">Aa Bb Cc 123</p>
+                </div>
+                <div>
+                  <p class="etiqueta">Cuerpo — Hind</p>
+                  <p class="g-tipo-cuerpo mb-0">
+                    El zorro marrón salta veloz sobre el perro perezoso. Esta
+                    tipografía se usa para párrafos y textos largos por su buena
+                    legibilidad en pantalla.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- 3. Botones 3D -->
+            <section class="g-seccion">
+              <h2>3 · Botones 3D</h2>
+              <p class="g-intro">
+                Tienen "grosor" (sombra inferior sólida) y se hunden al hacer
+                clic. Probalos.
+              </p>
+              <div class="g-botones">
+                <button type="button" class="g-btn">Botón principal</button>
+                <button type="button" class="g-btn acento">
+                  Botón de acento
+                </button>
+              </div>
+            </section>
+
+            <!-- 4. Enlaces animados con cambio de color -->
+            <section class="g-seccion">
+              <h2>4 · Enlaces animados</h2>
+              <p class="g-intro">
+                Cambian de color y despliegan un subrayado al pasar el mouse.
+              </p>
+              <div class="g-enlaces">
+                <a href="#" class="g-link">Sobre nosotros</a>
+                <a href="#" class="g-link">Colección</a>
+                <a href="#" class="g-link">Contacto</a>
+              </div>
+            </section>
+
+            <!-- 5. Campos de formulario con borde de foco -->
+            <section class="g-seccion">
+              <h2>5 · Campos de formulario</h2>
+              <p class="g-intro">
+                Al hacer foco (clic o Tab), el campo resalta su borde con un
+                halo de color.
+              </p>
+              <div class="g-form">
+                <label for="g-nombre">Nombre</label>
+                <input
+                  type="text"
+                  id="g-nombre"
+                  class="g-input"
+                  placeholder="Escribí acá y mirá el borde…"
+                />
+              </div>
+            </section>
+
+            <!-- 6. Acordeón de textos (HTML5 <details>, sin JavaScript) -->
+            <section class="g-seccion">
+              <h2>6 · Acordeón de textos</h2>
+              <p class="g-intro">
+                Hecho con <code>&lt;details&gt;</code> y CSS; se abre uno por vez.
+              </p>
+              <div class="g-acordeon">
+                <details name="guia" open>
+                  <summary>¿Qué es una guía de estilo?</summary>
+                  <div class="contenido">
+                    Es un documento que reúne los elementos visuales de una marca
+                    (colores, tipografías, botones, etc.) para mantener la
+                    coherencia en todos sus materiales.
+                  </div>
+                </details>
+                <details name="guia">
+                  <summary>¿Por qué usar variables CSS?</summary>
+                  <div class="contenido">
+                    Permiten definir los colores y medidas una sola vez y
+                    reutilizarlos en toda la hoja de estilos, así un cambio se
+                    refleja en todos lados.
+                  </div>
+                </details>
+                <details name="guia">
+                  <summary>¿Necesita JavaScript?</summary>
+                  <div class="contenido">
+                    No. Todo el acordeón funciona solo con HTML5 y CSS, usando la
+                    etiqueta nativa <code>&lt;details&gt;</code>.
+                  </div>
+                </details>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- Barra lateral: datos del proyecto + roles -->
+        <div class="col-lg-4">
+          <div class="card shadow-sm mb-4">
+            <div class="card-body">
+              <h3 class="h6 text-muted">Datos del proyecto</h3>
+              <p class="mb-1">
+                <strong>Tecnologías:</strong> HTML5, CSS3 (sin frameworks)
+              </p>
+              <p class="mb-3"><strong>Estado:</strong> Funcional</p>
+              <a
+                href="https://github.com/LeandroLicata/portfolio-grupal"
+                class="btn btn-outline-dark w-100"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="bi bi-github"></i> Código fuente
+              </a>
+            </div>
+          </div>
+
+          <!-- Roles del equipo en este proyecto (rúbrica: participación) -->
+          <!-- ⚠️ CONFIRMAR el rol real de cada integrante -->
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="h6 text-muted">Roles del equipo</h3>
+              <ul class="list-unstyled mb-0 small">
+                <li class="mb-2">
+                  <i class="bi bi-person-fill text-primary"></i>
+                  <strong>Leandro Licata</strong> — Diseñador / Programador
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-person-fill text-primary"></i>
+                  <strong>Federico Cabrera</strong> — (rol a completar)
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-person-fill text-primary"></i>
+                  <strong>Gonzalo Tapia</strong> — (rol a completar)
+                </li>
+                <li class="mb-0">
+                  <i class="bi bi-person-fill text-primary"></i>
+                  <strong>Gustavo Di Paola</strong> — (rol a completar)
+                </li>
+              </ul>
+              <p class="text-muted small mt-2 mb-0">
+                Roles posibles: analista, documentador, diseñador, programador.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="../index.html#proyectos" class="btn btn-link mt-4 px-0">
+        <i class="bi bi-arrow-left"></i> Volver a proyectos
+      </a>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p class="small mb-0">
+          &copy; 2026 Nuestro Equipo · Práctica Profesionalizante I
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

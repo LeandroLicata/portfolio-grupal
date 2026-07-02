@@ -1,0 +1,294 @@
+/* ============================================================
+   Guía de estilo — hoja de estilos propia (Ejercicio 4 del TP)
+   Todo el CSS de la guía vive acá, separado del HTML
+   (rúbrica: "Archivo css aparte del html").
+
+   Usa la MISMA paleta y tipografías del portfolio:
+   - Colores y variables: definidos en css/colores.css
+     (--primary #2563eb, --secondary #020062, --accent #f59e0b).
+   - Tipografías: Poppins (títulos) + Hind (cuerpo), también
+     importadas por css/colores.css.
+   ============================================================ */
+
+/* ---------- Contenedor y variables ----------
+   Reasignamos las variables del portfolio a nombres locales de la
+   guía, acotadas a .guia-estilo para no pisar el resto del sitio. */
+.guia-estilo {
+  --g-bg: #f4f4fc; /* lavanda muy claro (fondo de la guía) */
+  --g-surface: #ffffff; /* tarjetas / superficies */
+  --g-ink: var(--secondary); /* texto principal: navy #020062 */
+  --g-muted: #6c6f93; /* texto secundario */
+  --g-primary: var(--primary); /* azul #2563eb */
+  --g-primary-dark: #1e4fc4; /* azul oscuro (sombra 3D) */
+  --g-accent: var(--accent); /* ámbar #f59e0b */
+  --g-accent-dark: #d97706; /* ámbar oscuro (sombra 3D) */
+  --g-border: #d8d8ef; /* bordes suaves (lavanda) */
+
+  background-color: var(--g-bg);
+  color: var(--g-ink);
+  font-family: "Hind", sans-serif;
+  line-height: 1.6;
+  padding: 2.5rem;
+  border-radius: 14px;
+  border: 1px solid var(--g-border);
+}
+
+/* Títulos con la tipografía del portfolio */
+.guia-estilo h1,
+.guia-estilo h2,
+.guia-estilo h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--g-ink);
+  line-height: 1.2;
+}
+
+.guia-estilo .g-intro {
+  color: var(--g-muted);
+  max-width: 60ch;
+}
+
+/* ---------- Secciones ---------- */
+.g-seccion {
+  padding: 2rem 0;
+  border-bottom: 1px dashed var(--g-border);
+}
+.g-seccion:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Cada título de sección lleva una barrita azul a la izquierda */
+.g-seccion > h2 {
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-left: 1rem;
+}
+.g-seccion > h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 1.3em;
+  border-radius: 3px;
+  background: var(--g-primary);
+}
+
+/* ============================================================
+   1. Paleta de colores
+   ============================================================ */
+.g-paleta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+}
+.g-color {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--g-border);
+  background: var(--g-surface);
+}
+.g-color .muestra {
+  height: 90px;
+}
+.g-color .datos {
+  padding: 0.55rem 0.75rem;
+  font-size: 0.85rem;
+}
+.g-color .nombre {
+  font-weight: 700;
+  display: block;
+}
+.g-color .hex {
+  color: var(--g-muted);
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   2. Tipografía
+   ============================================================ */
+.g-tipo {
+  display: grid;
+  gap: 1.25rem;
+}
+.g-tipo .etiqueta {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--g-muted);
+}
+.g-tipo-display {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.g-tipo-cuerpo {
+  max-width: 60ch;
+}
+
+/* ============================================================
+   3. Botones 3D
+   ============================================================ */
+.g-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.g-btn {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--g-primary);
+  border: 0;
+  border-radius: 10px;
+  padding: 0.7rem 1.6rem;
+  cursor: pointer;
+  /* Efecto 3D: sombra inferior sólida que simula el grosor del botón */
+  box-shadow: 0 5px 0 var(--g-primary-dark);
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease,
+    filter 0.2s ease;
+}
+.g-btn:hover {
+  filter: brightness(1.05);
+}
+.g-btn:active {
+  /* Al presionar, el botón "baja" y la sombra casi desaparece */
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--g-primary-dark);
+}
+/* Variante de acento (ámbar) */
+.g-btn.acento {
+  color: #1a1a1a; /* texto oscuro: se lee mejor sobre ámbar */
+  background: var(--g-accent);
+  box-shadow: 0 5px 0 var(--g-accent-dark);
+}
+.g-btn.acento:active {
+  box-shadow: 0 1px 0 var(--g-accent-dark);
+}
+
+/* ============================================================
+   4. Enlaces animados con cambio de color
+   ============================================================ */
+.g-enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 1.1rem;
+}
+.g-link {
+  position: relative;
+  color: var(--g-primary);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+/* Subrayado animado que crece de izquierda a derecha al pasar el mouse */
+.g-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: var(--g-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.g-link:hover {
+  color: var(--g-accent);
+}
+.g-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ============================================================
+   5. Campos de formulario con borde de foco resaltado
+   ============================================================ */
+.g-form {
+  max-width: 440px;
+}
+.g-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.g-input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--g-ink);
+  background: var(--g-surface);
+  border: 2px solid var(--g-border);
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.g-input:focus {
+  outline: none;
+  /* Borde azul + halo suave cuando el campo toma el foco */
+  border-color: var(--g-primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+/* ============================================================
+   6. Acordeón de textos (HTML5 <details> + CSS, sin JavaScript)
+   ============================================================ */
+.g-acordeon details {
+  background: var(--g-surface);
+  border: 1px solid var(--g-border);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+.g-acordeon summary {
+  cursor: pointer;
+  padding: 0.9rem 1.1rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; /* saca el triángulo nativo (estándar) */
+  transition: background 0.2s ease;
+}
+.g-acordeon summary::-webkit-details-marker {
+  display: none; /* saca el triángulo nativo (WebKit/Safari) */
+}
+.g-acordeon summary:hover {
+  background: #eef1fd;
+}
+/* Icono "+" que rota a "x" al abrir */
+.g-acordeon summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--g-primary);
+  transition: transform 0.25s ease;
+}
+.g-acordeon details[open] summary::after {
+  transform: rotate(45deg);
+}
+.g-acordeon .contenido {
+  padding: 0 1.1rem 1rem;
+  color: var(--g-muted);
+  /* Aparición suave del texto al desplegar */
+  animation: g-desplegar 0.3s ease;
+}
+@keyframes g-desplegar {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -19,13 +19,16 @@ Proyecto desarrollado para la materia **Práctica Profesionalizante I**.
 portfolio-grupal/
 ├── index.html              # Home: CV del equipo (acordeón) + grilla de proyectos
 ├── css/
-│   └── styles.css          # Estilos propios (sobre Bootstrap)
+│   ├── colores.css         # Paleta y tipografías del portfolio
+│   ├── styles.css          # Estilos propios (sobre Bootstrap)
+│   └── guia-estilo.css     # CSS propio de la guía de estilo (Ejercicio 4)
 ├── assets/
 │   └── img/                # Imágenes (placeholders SVG por ahora)
 └── proyectos/
-    ├── proyecto1.html      # Páginas de detalle de cada miniproyecto
-    ├── proyecto2.html
-    └── proyecto3.html
+    ├── proyecto1.html      # Letras Académicas (proyecto adicional)
+    ├── proyecto2.html      # Ejercicio 2: formulario con validación
+    ├── proyecto3.html      # Ejercicio 3: landing page
+    └── proyecto4.html      # Ejercicio 4: guía de estilo
 ```
 
 ## Cómo verlo
