@@ -17,7 +17,7 @@ Proyecto desarrollado para la materia **Práctica Profesionalizante I**.
 
 ```
 portfolio-grupal/
-├── index.html              # Home: equipo + grilla de proyectos
+├── index.html              # Home: CV del equipo (acordeón) + grilla de proyectos
 ├── css/
 │   └── styles.css          # Estilos propios (sobre Bootstrap)
 ├── assets/
@@ -34,7 +34,7 @@ Abrí [index.html](index.html) directamente en el navegador (doble clic). No nec
 
 ## Cómo completarlo (para el equipo)
 
-1. **Equipo:** en [index.html](index.html), sección `#equipo`, reemplazar en cada card "Nombre Apellido", el rol/carrera, la descripción y los links a redes.
+1. **CV del equipo:** en [index.html](index.html), sección `#cv`, cada integrante tiene un ítem de acordeón con su currículum. Completar los campos marcados con `⚠️` y los placeholders entre paréntesis: identificación, contacto, idiomas, título más alto, perfeccionamiento certificado, habilidades (blandas/técnicas/transversales) y antecedentes laborales.
 2. **Proyectos:** por cada miniproyecto, actualizar la card correspondiente en `#proyectos` (título, descripción, badges de tecnología) y editar su página en `proyectos/`.
 3. **Agregar más proyectos:** copiar `proyectos/proyecto3.html` → `proyecto4.html`, editar el contenido y agregar una nueva card en el home apuntando a esa página.
 4. **Imágenes:** reemplazar los placeholders de [assets/img/](assets/img/) por fotos del equipo y capturas reales (mantener los mismos nombres de archivo o actualizar los `src`).

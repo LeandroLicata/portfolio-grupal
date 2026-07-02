@@ -48,7 +48,7 @@
               <a class="nav-link" href="#inicio">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#equipo">Equipo</a>
+              <a class="nav-link" href="#cv">CV del equipo</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#proyectos">Proyectos</a>
@@ -79,181 +79,613 @@
       </div>
     </header>
 
-    <!-- ===== EQUIPO ===== -->
-    <section id="equipo" class="py-5">
+    <!-- ===== CV DEL EQUIPO (carátula del portafolio) ===== -->
+    <!--
+      Cada integrante tiene su CV en un ítem de acordeón (Bootstrap 5).
+      El encabezado muestra foto + nombre + rol (conciso); al desplegar
+      aparecen todos los datos pedidos por la consigna:
+      identificación, contacto, idiomas, título más alto,
+      perfeccionamiento certificado, habilidades (blandas / técnicas /
+      transversales) y antecedentes laborales.
+    -->
+    <section id="cv" class="py-5">
       <div class="container">
-        <h2 class="text-center mb-5 section-title">Nuestro Equipo</h2>
-        <div class="row g-4">
-          <!-- Integrante (duplicar este bloque por cada uno) -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 text-center shadow-sm">
-              <img
-                src="assets/img/leandro.jpeg"
-                class="card-img-top avatar mx-auto mt-4"
-                alt="Foto de Leandro Licata"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Leandro Licata</h5>
-                <p class="text-muted mb-2">Desarrollador Full Stack</p>
-                <p class="card-text small">
-                  Me dedico al desarrollo web full stack. Disfruto convertir
-                  ideas en aplicaciones reales y cuidar los detalles, tanto en
-                  el front-end como en el back-end. Curioso, autodidacta y
-                  siempre con ganas de sumar al equipo.
+        <h2 class="text-center mb-3 section-title">CV del equipo</h2>
+        <p class="text-center text-muted mb-5 col-lg-8 mx-auto">
+          Hacé clic en cada integrante para ver su currículum completo.
+        </p>
+
+        <div class="accordion cv-accordion" id="cvAccordion">
+          <!-- ============ CV 1: Leandro Licata ============ -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="cvHeadLeandro">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#cvBodyLeandro"
+                aria-expanded="true"
+                aria-controls="cvBodyLeandro"
+              >
+                <img
+                  src="assets/img/leandro.jpeg"
+                  class="avatar-sm me-3"
+                  alt="Foto de Leandro Licata"
+                />
+                <span class="cv-head-text">
+                  <span class="cv-name">Leandro Licata</span>
+                  <span class="cv-role">Desarrollador Full Stack</span>
+                </span>
+              </button>
+            </h3>
+            <div
+              id="cvBodyLeandro"
+              class="accordion-collapse collapse show"
+              aria-labelledby="cvHeadLeandro"
+              data-bs-parent="#cvAccordion"
+            >
+              <div class="accordion-body">
+                <p class="cv-intro">
+                  Desarrollador Full Stack con experiencia en plataformas SaaS y
+                  aplicaciones web escalables. Especializado en el stack
+                  JavaScript/TypeScript moderno (Next.js, Node.js, PostgreSQL):
+                  migraciones de arquitectura, integración de pasarelas de pago,
+                  autenticación con JWT y testing automatizado. Trayectoria
+                  previa como técnico de PC y electricista, que aportó una sólida
+                  capacidad para resolver problemas y aprender de forma
+                  autodidacta.
                 </p>
-                <div class="d-flex justify-content-center gap-3 fs-5">
-                  <a
-                    href="https://github.com/LeandroLicata"
-                    class="text-dark"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="GitHub de Leandro Licata"
-                    ><i class="bi bi-github"></i
-                  ></a>
-                  <a
-                    href="https://www.linkedin.com/in/leandro-licata/"
-                    class="text-dark"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="LinkedIn de Leandro Licata"
-                    ><i class="bi bi-linkedin"></i
-                  ></a>
-                  <a
-                    href="mailto:leandrolicata1@gmail.com"
-                    class="text-dark"
-                    aria-label="Email de Leandro Licata"
-                    ><i class="bi bi-envelope"></i
-                  ></a>
+
+                <div class="row g-4">
+                  <!-- Contacto + Idiomas -->
+                  <div class="col-lg-4">
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-person-vcard"></i> Contacto
+                    </h6>
+                    <ul class="cv-list">
+                      <li>
+                        <i class="bi bi-geo-alt"></i> Mendoza, Argentina
+                      </li>
+                      <li>
+                        <i class="bi bi-envelope"></i>
+                        <a href="mailto:leandrolicata1@gmail.com"
+                          >leandrolicata1@gmail.com</a
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-telephone"></i>
+                        <a href="tel:+5492617153984">+54 9 261 715 3984</a>
+                      </li>
+                      <li>
+                        <i class="bi bi-github"></i>
+                        <a
+                          href="https://github.com/LeandroLicata"
+                          target="_blank"
+                          rel="noopener"
+                          >github.com/LeandroLicata</a
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-linkedin"></i>
+                        <a
+                          href="https://www.linkedin.com/in/leandro-licata/"
+                          target="_blank"
+                          rel="noopener"
+                          >in/leandro-licata</a
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-globe"></i>
+                        <a
+                          href="https://leandro-licata-portfolio.vercel.app"
+                          target="_blank"
+                          rel="noopener"
+                          >leandro-licata-portfolio.vercel.app</a
+                        >
+                      </li>
+                    </ul>
+
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-translate"></i> Idiomas
+                    </h6>
+                    <ul class="cv-list">
+                      <li>Español — Nativo</li>
+                      <li>Inglés — Avanzado</li>
+                    </ul>
+                  </div>
+
+                  <!-- Formación -->
+                  <div class="col-lg-8">
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-mortarboard"></i> Título completo más alto
+                    </h6>
+                    <p class="mb-3">
+                      <strong>Tecnicatura Superior en Desarrollo de
+                      Software</strong> — Instituto Superior Manuel Belgrano ·
+                      2026 (en curso).
+                    </p>
+
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-patch-check"></i> Perfeccionamiento
+                      certificado
+                    </h6>
+                    <ul class="cv-list">
+                      <li>
+                        <strong>Carrera Full Stack Web Developer</strong> —
+                        Henry Bootcamp · 2022–2023.
+                      </li>
+                      <li>
+                        <strong>Formación autodidacta</strong> — React, Next.js,
+                        Node.js, TypeScript.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+
+                <!-- Habilidades -->
+                <h6 class="cv-subtitle mt-4">
+                  <i class="bi bi-stars"></i> Habilidades
+                </h6>
+                <p class="mb-2">
+                  <strong>Técnicas:</strong>
+                  <span class="badge text-bg-primary">React</span>
+                  <span class="badge text-bg-info">Next.js</span>
+                  <span class="badge text-bg-warning">TypeScript</span>
+                  <span class="badge text-bg-secondary">Tailwind</span>
+                  <span class="badge text-bg-primary">Bootstrap</span>
+                  <span class="badge text-bg-info">Redux</span>
+                  <span class="badge text-bg-warning">Node.js</span>
+                  <span class="badge text-bg-secondary">NestJS</span>
+                  <span class="badge text-bg-primary">Express</span>
+                  <span class="badge text-bg-info">PostgreSQL</span>
+                  <span class="badge text-bg-warning">MongoDB</span>
+                  <span class="badge text-bg-secondary">Prisma</span>
+                  <span class="badge text-bg-primary">TypeORM</span>
+                  <span class="badge text-bg-info">Testing (unit / e2e)</span>
+                  <span class="badge text-bg-warning">MercadoPago</span>
+                  <span class="badge text-bg-secondary">Git</span>
+                </p>
+                <p class="mb-2">
+                  <strong>Blandas:</strong>
+                  <span class="badge text-bg-light">Autodidacta</span>
+                  <span class="badge text-bg-light">Trabajo en equipo</span>
+                  <span class="badge text-bg-light">Comunicación</span>
+                  <span class="badge text-bg-light">Atención al detalle</span>
+                </p>
+                <p class="mb-0">
+                  <strong>Transversales:</strong>
+                  <span class="badge text-bg-light">Resolución de problemas</span>
+                  <span class="badge text-bg-light">Trabajo remoto</span>
+                  <span class="badge text-bg-light">Adaptabilidad</span>
+                  <span class="badge text-bg-light">Aprendizaje continuo</span>
+                </p>
+
+                <!-- Antecedentes laborales -->
+                <h6 class="cv-subtitle mt-4">
+                  <i class="bi bi-briefcase"></i> Antecedentes laborales
+                </h6>
+                <ul class="cv-timeline">
+                  <li>
+                    <span class="cv-when">dic 2025 – Actualidad</span>
+                    <strong>Desarrollador Web Full Stack</strong> — Olalingo
+                    (Remoto). Múltiples proyectos (Olalingo Online, Campus y
+                    panel de administración): migración de autenticación a
+                    NextAuth con JWT, unificación del panel admin heredado
+                    (PHP + React → Next.js), integración de MercadoPago con
+                    webhooks y testing automatizado (unit + e2e) en 5
+                    repositorios.
+                    <br /><span class="cv-stack"
+                      >Stack: Next.js, Tailwind, TypeScript, NestJS, TypeORM,
+                      Prisma, PostgreSQL, MercadoPago</span
+                    >
+                  </li>
+                  <li>
+                    <span class="cv-when">2024</span>
+                    <strong>Pasante — Desarrollador Web</strong> — Timbring.
+                    Migración de autenticación de Auth0 a NextAuth, home
+                    responsive, formulario de registro con validaciones y
+                    sistema de recuperación de contraseñas.
+                    <br /><span class="cv-stack"
+                      >Stack: Next.js, TailwindCSS, TypeScript, Redux,
+                      Node.js</span
+                    >
+                  </li>
+                  <li>
+                    <span class="cv-when">Trayectoria previa</span>
+                    <strong>Técnico de PC y electricista</strong>. Base sólida
+                    en resolución de problemas y aprendizaje autodidacta.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 text-center shadow-sm">
-              <img
-                src="assets/img/Federico.jpg"
-                class="card-img-top avatar mx-auto mt-4"
-                alt="Foto de Federico Cabrera"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Federico Cabrera</h5>
-                <p class="text-muted mb-2"><strong>Rol</strong>: Analista / Programador</p>
-                <p class="card-text small">
+          <!-- ============ CV 2: Federico Cabrera ============ -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="cvHeadFederico">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#cvBodyFederico"
+                aria-expanded="false"
+                aria-controls="cvBodyFederico"
+              >
+                <img
+                  src="assets/img/Federico.jpg"
+                  class="avatar-sm me-3"
+                  alt="Foto de Federico Cabrera"
+                />
+                <span class="cv-head-text">
+                  <span class="cv-name">Federico Cabrera</span>
+                  <span class="cv-role">Analista / Programador</span>
+                </span>
+              </button>
+            </h3>
+            <div
+              id="cvBodyFederico"
+              class="accordion-collapse collapse"
+              aria-labelledby="cvHeadFederico"
+              data-bs-parent="#cvAccordion"
+            >
+              <div class="accordion-body">
+                <p class="cv-intro">
                   Auxiliar en el Poder Judicial con más de 15 años de
                   experiencia, en transición activa hacia el sector tecnológico.
                   Desarrollo proyectos web con HTML, CSS, Bootstrap y
                   JavaScript, e integro herramientas de IA para automatizar
                   flujos de trabajo.
                 </p>
-                <div class="d-flex justify-content-center gap-3 fs-5">
-                  <a
-                    href="https://github.com/federicocabrera1978-svg"
-                    class="text-dark"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="GitHub de Federico Cabrera"
-                    ><i class="bi bi-github"></i
-                  ></a>
-                  <a
-                    href="https://www.linkedin.com/in/federico-cabrera-8110512b6/"
-                    class="text-dark"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="LinkedIn de Federico Cabrera"
-                    ><i class="bi bi-linkedin"></i
-                  ></a>
-                  <a
-                    href="mailto:federicocabrera1978@gmail.com"
-                    class="text-dark"
-                    aria-label="Email de Federico Cabrera"
-                    ><i class="bi bi-envelope"></i
-                  ></a>
+
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-person-vcard"></i> Contacto
+                    </h6>
+                    <ul class="cv-list">
+                      <li>
+                        <i class="bi bi-envelope"></i>
+                        <a href="mailto:federicocabrera1978@gmail.com"
+                          >federicocabrera1978@gmail.com</a
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-github"></i>
+                        <a
+                          href="https://github.com/federicocabrera1978-svg"
+                          target="_blank"
+                          rel="noopener"
+                          >github.com/federicocabrera1978-svg</a
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-linkedin"></i>
+                        <a
+                          href="https://www.linkedin.com/in/federico-cabrera-8110512b6/"
+                          target="_blank"
+                          rel="noopener"
+                          >in/federico-cabrera</a
+                        >
+                      </li>
+                      <li><i class="bi bi-geo-alt"></i> (Ciudad, país)</li>
+                    </ul>
+
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-translate"></i> Idiomas
+                    </h6>
+                    <ul class="cv-list">
+                      <li>Español — Nativo</li>
+                      <li>(Otro idioma — nivel)</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-8">
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-mortarboard"></i> Título completo más alto
+                    </h6>
+                    <p class="mb-3">
+                      Estudiante de la Tecnicatura Superior en Desarrollo de
+                      Software — Instituto Superior Manuel Belgrano (en curso).
+                      <!-- Completar con título previo si corresponde -->
+                    </p>
+
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-patch-check"></i> Perfeccionamiento
+                      certificado
+                    </h6>
+                    <ul class="cv-list">
+                      <li>(Curso / certificación — institución, año)</li>
+                    </ul>
+                  </div>
                 </div>
+
+                <h6 class="cv-subtitle mt-4">
+                  <i class="bi bi-stars"></i> Habilidades
+                </h6>
+                <p class="mb-2">
+                  <strong>Técnicas:</strong>
+                  <span class="badge text-bg-primary">HTML5</span>
+                  <span class="badge text-bg-info">CSS3</span>
+                  <span class="badge text-bg-warning">JavaScript</span>
+                  <span class="badge text-bg-secondary">Bootstrap</span>
+                  <span class="badge text-bg-primary">Herramientas de IA</span>
+                </p>
+                <p class="mb-2">
+                  <strong>Blandas:</strong>
+                  <span class="badge text-bg-light">Trabajo en equipo</span>
+                  <span class="badge text-bg-light">Responsabilidad</span>
+                  <span class="badge text-bg-light">Comunicación</span>
+                </p>
+                <p class="mb-0">
+                  <strong>Transversales:</strong>
+                  <span class="badge text-bg-light">Organización</span>
+                  <span class="badge text-bg-light">Automatización de procesos</span>
+                </p>
+
+                <h6 class="cv-subtitle mt-4">
+                  <i class="bi bi-briefcase"></i> Antecedentes laborales
+                </h6>
+                <ul class="cv-timeline">
+                  <li>
+                    <span class="cv-when">(Año) – Actualidad</span>
+                    <strong>Auxiliar</strong> — Poder Judicial. Más de 15 años de
+                    experiencia.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 text-center shadow-sm">
-              <img
-                src="assets/img/placeholder-avatar.svg"
-                class="card-img-top avatar mx-auto mt-4"
-                alt="Foto de Gonzalo Tapia"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Gonzalo Tapia</h5>
-                <p class="text-muted mb-2">Carrera / Rol</p>
-                <p class="card-text small">
-                  Breve descripción del integrante: intereses, habilidades, lo
+          <!-- ============ CV 3: Gonzalo Tapia ============ -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="cvHeadGonzalo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#cvBodyGonzalo"
+                aria-expanded="false"
+                aria-controls="cvBodyGonzalo"
+              >
+                <img
+                  src="assets/img/gonzalo.jpeg"
+                  class="avatar-sm me-3"
+                  alt="Foto de Gonzalo Tapia"
+                />
+                <span class="cv-head-text">
+                  <span class="cv-name">Gonzalo Tapia</span>
+                  <span class="cv-role">Carrera / Rol</span>
+                </span>
+              </button>
+            </h3>
+            <div
+              id="cvBodyGonzalo"
+              class="accordion-collapse collapse"
+              aria-labelledby="cvHeadGonzalo"
+              data-bs-parent="#cvAccordion"
+            >
+              <div class="accordion-body">
+                <p class="cv-intro">
+                  Breve presentación del integrante: intereses, habilidades y lo
                   que aporta al equipo.
                 </p>
-                <div class="d-flex justify-content-center gap-3 fs-5">
-                  <a
-                    href="https://github.com/GonzaTapia98"
-                    class="text-dark"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="GitHub de Gonzalo Tapia"
-                    ><i class="bi bi-github"></i
-                  ></a>
-                  <a
-                    href="https://www.linkedin.com/in/gonzalo-nicol%C3%A1s-tapia-385ab4317/"
-                    class="text-dark"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="LinkedIn de Gonzalo Tapia"
-                    ><i class="bi bi-linkedin"></i
-                  ></a>
-                  <a
-                    href="mailto:gonztapia98@gmail.com"
-                    class="text-dark"
-                    aria-label="Email de Gonzalo Tapia"
-                    ><i class="bi bi-envelope"></i
-                  ></a>
+
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-person-vcard"></i> Contacto
+                    </h6>
+                    <ul class="cv-list">
+                      <li>
+                        <i class="bi bi-envelope"></i>
+                        <a href="mailto:gonztapia98@gmail.com"
+                          >gonztapia98@gmail.com</a
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-github"></i>
+                        <a
+                          href="https://github.com/GonzaTapia98"
+                          target="_blank"
+                          rel="noopener"
+                          >github.com/GonzaTapia98</a
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-linkedin"></i>
+                        <a
+                          href="https://www.linkedin.com/in/gonzalo-nicol%C3%A1s-tapia-385ab4317/"
+                          target="_blank"
+                          rel="noopener"
+                          >in/gonzalo-tapia</a
+                        >
+                      </li>
+                      <li><i class="bi bi-geo-alt"></i> (Ciudad, país)</li>
+                    </ul>
+
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-translate"></i> Idiomas
+                    </h6>
+                    <ul class="cv-list">
+                      <li>Español — Nativo</li>
+                      <li>(Otro idioma — nivel)</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-8">
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-mortarboard"></i> Título completo más alto
+                    </h6>
+                    <p class="mb-3">
+                      Estudiante de la Tecnicatura Superior en Desarrollo de
+                      Software — Instituto Superior Manuel Belgrano (en curso).
+                    </p>
+
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-patch-check"></i> Perfeccionamiento
+                      certificado
+                    </h6>
+                    <ul class="cv-list">
+                      <li>(Curso / certificación — institución, año)</li>
+                    </ul>
+                  </div>
                 </div>
+
+                <h6 class="cv-subtitle mt-4">
+                  <i class="bi bi-stars"></i> Habilidades
+                </h6>
+                <p class="mb-2">
+                  <strong>Técnicas:</strong>
+                  <span class="badge text-bg-primary">HTML5</span>
+                  <span class="badge text-bg-info">CSS3</span>
+                  <span class="badge text-bg-warning">JavaScript</span>
+                </p>
+                <p class="mb-2">
+                  <strong>Blandas:</strong>
+                  <span class="badge text-bg-light">(Habilidad)</span>
+                  <span class="badge text-bg-light">(Habilidad)</span>
+                </p>
+                <p class="mb-0">
+                  <strong>Transversales:</strong>
+                  <span class="badge text-bg-light">(Habilidad)</span>
+                </p>
+
+                <h6 class="cv-subtitle mt-4">
+                  <i class="bi bi-briefcase"></i> Antecedentes laborales
+                </h6>
+                <ul class="cv-timeline">
+                  <li>
+                    <span class="cv-when">(Año) – (Año)</span>
+                    <strong>(Puesto)</strong> — (Empresa). Descripción breve.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 text-center shadow-sm">
-              <img
-                src="assets/img/placeholder-avatar.svg"
-                class="card-img-top avatar mx-auto mt-4"
-                alt="Foto de Gustavo Di Paola"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Gustavo Di Paola</h5>
-                <p class="text-muted mb-2">Carrera / Rol</p>
-                <p class="card-text small">
-                  Breve descripción del integrante: intereses, habilidades, lo
+          <!-- ============ CV 4: Gustavo Di Paola ============ -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="cvHeadGustavo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#cvBodyGustavo"
+                aria-expanded="false"
+                aria-controls="cvBodyGustavo"
+              >
+                <img
+                  src="assets/img/gustavo.jpeg"
+                  class="avatar-sm me-3"
+                  alt="Foto de Gustavo Di Paola"
+                />
+                <span class="cv-head-text">
+                  <span class="cv-name">Gustavo Di Paola</span>
+                  <span class="cv-role">Carrera / Rol</span>
+                </span>
+              </button>
+            </h3>
+            <div
+              id="cvBodyGustavo"
+              class="accordion-collapse collapse"
+              aria-labelledby="cvHeadGustavo"
+              data-bs-parent="#cvAccordion"
+            >
+              <div class="accordion-body">
+                <p class="cv-intro">
+                  Breve presentación del integrante: intereses, habilidades y lo
                   que aporta al equipo.
                 </p>
-                <div class="d-flex justify-content-center gap-3 fs-5">
-                  <a
-                    href="https://github.com/gustavodipaola75-star"
-                    class="text-dark"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="GitHub de Gustavo Di Paola"
-                    ><i class="bi bi-github"></i
-                  ></a>
-                  <a
-                    href="https://www.linkedin.com/in/guss-di-paola-8b0888299/"
-                    class="text-dark"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="LinkedIn de Gustavo Di Paola"
-                    ><i class="bi bi-linkedin"></i
-                  ></a>
-                  <a
-                    href="mailto:gustavodipaola75@gmail.com"
-                    class="text-dark"
-                    aria-label="Email de Gustavo Di Paola"
-                    ><i class="bi bi-envelope"></i
-                  ></a>
+
+                <div class="row g-4">
+                  <div class="col-lg-4">
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-person-vcard"></i> Contacto
+                    </h6>
+                    <ul class="cv-list">
+                      <li>
+                        <i class="bi bi-envelope"></i>
+                        <a href="mailto:gustavodipaola75@gmail.com"
+                          >gustavodipaola75@gmail.com</a
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-github"></i>
+                        <a
+                          href="https://github.com/gustavodipaola75-star"
+                          target="_blank"
+                          rel="noopener"
+                          >github.com/gustavodipaola75-star</a
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-linkedin"></i>
+                        <a
+                          href="https://www.linkedin.com/in/guss-di-paola-8b0888299/"
+                          target="_blank"
+                          rel="noopener"
+                          >in/guss-di-paola</a
+                        >
+                      </li>
+                      <li><i class="bi bi-geo-alt"></i> (Ciudad, país)</li>
+                    </ul>
+
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-translate"></i> Idiomas
+                    </h6>
+                    <ul class="cv-list">
+                      <li>Español — Nativo</li>
+                      <li>(Otro idioma — nivel)</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-8">
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-mortarboard"></i> Título completo más alto
+                    </h6>
+                    <p class="mb-3">
+                      Estudiante de la Tecnicatura Superior en Desarrollo de
+                      Software — Instituto Superior Manuel Belgrano (en curso).
+                    </p>
+
+                    <h6 class="cv-subtitle">
+                      <i class="bi bi-patch-check"></i> Perfeccionamiento
+                      certificado
+                    </h6>
+                    <ul class="cv-list">
+                      <li>(Curso / certificación — institución, año)</li>
+                    </ul>
+                  </div>
                 </div>
+
+                <h6 class="cv-subtitle mt-4">
+                  <i class="bi bi-stars"></i> Habilidades
+                </h6>
+                <p class="mb-2">
+                  <strong>Técnicas:</strong>
+                  <span class="badge text-bg-primary">HTML5</span>
+                  <span class="badge text-bg-info">CSS3</span>
+                  <span class="badge text-bg-warning">JavaScript</span>
+                </p>
+                <p class="mb-2">
+                  <strong>Blandas:</strong>
+                  <span class="badge text-bg-light">(Habilidad)</span>
+                  <span class="badge text-bg-light">(Habilidad)</span>
+                </p>
+                <p class="mb-0">
+                  <strong>Transversales:</strong>
+                  <span class="badge text-bg-light">(Habilidad)</span>
+                </p>
+
+                <h6 class="cv-subtitle mt-4">
+                  <i class="bi bi-briefcase"></i> Antecedentes laborales
+                </h6>
+                <ul class="cv-timeline">
+                  <li>
+                    <span class="cv-when">(Año) – (Año)</span>
+                    <strong>(Puesto)</strong> — (Empresa). Descripción breve.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
