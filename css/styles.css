@@ -237,7 +237,7 @@ main a:not(.btn):not(.badge):hover::after {
 /* ----- Botones 3D (solo para CTA principales, vía clase .btn-3d) -----
    Dan "grosor" con una sombra inferior sólida y se hunden al hacer clic. */
 .btn-3d {
-  box-shadow: 0 5px 0 var(--btn-3d-shadow, #0b1a5c);
+  box-shadow: 0 2px 0 var(--btn-3d-shadow, #0b1a5c);
   transition:
     transform 0.08s ease,
     box-shadow 0.08s ease,
@@ -247,8 +247,8 @@ main a:not(.btn):not(.badge):hover::after {
   filter: brightness(1.03);
 }
 .btn-3d:active {
-  transform: translateY(4px);
-  box-shadow: 0 1px 0 var(--btn-3d-shadow, #0b1a5c);
+  transform: translateY(2px);
+  box-shadow: 0 0 0 var(--btn-3d-shadow, #0b1a5c);
 }
 /* Sombra 3D en tono ámbar oscuro para el botón de acento */
 .btn-accent.btn-3d {

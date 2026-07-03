@@ -146,8 +146,8 @@
   border-radius: 10px;
   padding: 0.7rem 1.6rem;
   cursor: pointer;
-  /* Efecto 3D: sombra inferior sólida que simula el grosor del botón */
-  box-shadow: 0 5px 0 var(--g-primary-dark);
+  /* Efecto 3D sutil: sombra inferior sólida que simula el grosor del botón */
+  box-shadow: 0 2px 0 var(--g-primary-dark);
   transition:
     transform 0.08s ease,
     box-shadow 0.08s ease,
@@ -157,18 +157,18 @@
   filter: brightness(1.05);
 }
 .g-btn:active {
-  /* Al presionar, el botón "baja" y la sombra casi desaparece */
-  transform: translateY(4px);
-  box-shadow: 0 1px 0 var(--g-primary-dark);
+  /* Al presionar, el botón "baja" y la sombra desaparece */
+  transform: translateY(2px);
+  box-shadow: 0 0 0 var(--g-primary-dark);
 }
 /* Variante de acento (ámbar) */
 .g-btn.acento {
   color: #1a1a1a; /* texto oscuro: se lee mejor sobre ámbar */
   background: var(--g-accent);
-  box-shadow: 0 5px 0 var(--g-accent-dark);
+  box-shadow: 0 2px 0 var(--g-accent-dark);
 }
 .g-btn.acento:active {
-  box-shadow: 0 1px 0 var(--g-accent-dark);
+  box-shadow: 0 0 0 var(--g-accent-dark);
 }
 
 /* ============================================================
